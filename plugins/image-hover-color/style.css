@@ -1,0 +1,39 @@
+.image-hover {
+    max-width: 100%; /* чтобы не выходило за пределы контейнера */
+    margin: 0 auto; /* центрируем изображение */
+    display: flex; /* для выравнивания содержимого */
+    align-items: center; /* по вертикали по центру */
+    transition: transform 0.5s ease; /* Добавляем переход для масштабирования */
+}
+
+.normal-image {
+    width: 100%; /* чтобы изображение занимало всю ширину родительского контейнера */
+    height: auto; /* сохраняем пропорции */
+    transition: transform 0.5s ease; /* Плавный переход для масштабирования изображения */
+}
+
+.image-hover:hover .normal-image {
+    transform: scale(1.1); /* Увеличение на 10% при наведении */
+}
+
+.overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Темный фон с градиентом */
+    opacity: 0; /* Скрыто по умолчанию */
+    transition: opacity 0.5s ease; /* Плавный переход для появления наложения */
+    width: 100%;
+    height: 100%;
+    display: flex; /* Flexbox для центрирования текста */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+.image-hover:hover .overlay {
+    opacity: 1; /* Показать наложение при наведении */
+}
+
+.overlay-content {
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста */
+    padding: 10px; /* Отступы вокруг текста */
+    font-size: 20px; /* Размер шрифта */
+}
