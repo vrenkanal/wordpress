@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/image-hover-color",
+  "version": "0.1.0",
+  "title": "Image Hover Color",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "image-hover-color",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "image-hover-color-style",
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayText": {
+      "type": "string",
+      "default": "Ваш текст"
+    },
+    "imageSize": {
+      "type": "number",
+      "default": 100
+    }
+  },
+  "renderCallback": "my_custom_block_render"
+}
